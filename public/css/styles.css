@@ -1,0 +1,266 @@
+/* body and misc element css */
+body {
+  background-color: #0e3386;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  color: #0e3386;
+}
+
+h3 {
+  color: white;
+}
+/* setting the standings/schedule headings to red on blue background sections */
+.schedule-standings-header {
+  color: white;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+}
+
+/* navbar sectiion css  */
+.navbar {
+  background-color: #cc3433;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  text-decoration: none;
+  color: #0e3386;
+}
+
+li a:hover {
+  color: white;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.cubs-flag-nav {
+  background-color: white;
+  border: 2px #0e3386 solid;
+  border-radius: 1px;
+}
+
+/* mlb section of page */
+
+.mlb {
+  padding: 1.5rem;
+}
+
+.chi-game {
+  color: white;
+  display: flex;
+  gap: 2rem;
+}
+
+.mlb-schedule-container {
+  display: flex;
+}
+
+.cubs-record-info p {
+  color: white;
+  margin-bottom: 0;
+}
+
+.cubs-record-header {
+  color: white;
+}
+
+.current-inning {
+  margin-top: 1rem;
+}
+
+.cubs-date-today {
+  color: white;
+}
+/* tripple aaa section of page */
+
+.tripple-a {
+  background-color: #cc3433;
+  color: white;
+  padding: 1.5rem;
+}
+
+/* double a styling */
+
+.double-a {
+  padding: 1.5rem;
+}
+
+/* advance a css styling */
+
+.adv-a {
+  padding: 1.5rem;
+  background-color: #cc3433;
+}
+
+/* low a css styling */
+
+.low-a {
+  padding: 1.5rem;
+}
+
+/* prospect section styling */
+
+.prospects {
+  background-color: #cc3433;
+  padding: 1.5rem;
+}
+
+.prospect-iframe {
+  border: 0.5rem #0e3386 solid;
+}
+
+/* footer section styling */
+footer {
+  color: #cc3433;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p a {
+  color: #cc3433;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: #cc3433;
+  border: 1px white solid;
+}
+
+.footer-cubs-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cubs-flag {
+  background-color: white;
+  border: 2px #cc3433 solid;
+  border-radius: 1px;
+}
+
+/* all level buttons styling */
+
+.blue-milb-button {
+  border-radius: 4px;
+  background-color: #0e3386;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.25rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0.25rem;
+}
+
+.blue-milb-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.blue-milb-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.blue-milb-button:hover span {
+  padding-right: 25px;
+}
+
+.blue-milb-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.blue-milb-button a {
+  color: white;
+}
+
+.red-milb-button {
+  border-radius: 4px;
+  background-color: #cc3433;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.25rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0.25rem;
+}
+
+.red-milb-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.red-milb-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.red-milb-button:hover span {
+  padding-right: 25px;
+}
+
+.red-milb-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.red-milb-button a {
+  color: white;
+}
+
+/* setting media query for mobile */
+
+@media screen and (max-width: 700px) {
+  /* navbar media query */
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  nav li {
+    text-align: center;
+    padding-bottom: 0.25rem;
+  }
+
+  li {
+    padding-bottom: 0px;
+  }
+
+  /* mlb section media query */
+  .chi-game {
+    gap: 0;
+  }
+}
