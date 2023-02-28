@@ -7,7 +7,6 @@ function Mlbschedule() {
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   const scheduleUrl =
     "https://statsapi.mlb.com/api/v1/schedule?lang=en&sportId=1&hydrate=team(venue(timezone)),venue(timezone),game(seriesStatus,seriesSummary,tickets,promotions,sponsorships,content(summary,media(epg))),seriesStatus,seriesSummary,linescore,tickets,event(tickets),radioBroadcasts,broadcasts(all)&season=2023&startDate=2023-02-25&endDate=2023-10-01&teamId=112&eventTypes=primary&scheduleTypes=games,events,xref";
@@ -44,7 +43,7 @@ function Mlbschedule() {
   return (
     <div className="mlb-schedule-container">
       <div className="mlb-schedule1 pt-3">
-        {cubsGameToday ? (
+        {!loading && cubsGameToday ? (
           <div className="chi-game">
             <div>
               <h4>Home</h4>

@@ -12,6 +12,7 @@ function AdvA() {
             <a
               href="https://www.milb.com/south-bend/standings/"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Division Standings</span>
             </a>
@@ -25,6 +26,7 @@ function AdvA() {
             <a
               href="https://www.milb.com/south-bend/schedule/2023-04"
               target="_blank"
+              rel="noreferrer"
             >
               <span>SB Cubs Schedule</span>
             </a>

@@ -16,6 +16,7 @@ function Prospects() {
             src="https://www.mlb.com/prospects/2022/cubs/"
             width="100%"
             height="300"
+            title="Cubs Prospect List"
           ></iframe>
         </div>
       </div>

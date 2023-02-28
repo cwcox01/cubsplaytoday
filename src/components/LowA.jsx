@@ -12,6 +12,7 @@ function LowA() {
             <a
               href="https://www.milb.com/myrtle-beach/standings/"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Division Standings</span>
             </a>
@@ -25,6 +26,7 @@ function LowA() {
             <a
               href="https://www.milb.com/myrtle-beach/schedule/2023-04"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Pelicans Schedule</span>
             </a>

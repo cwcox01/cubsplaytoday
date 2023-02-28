@@ -9,7 +9,11 @@ function TrippleAAA() {
         <h5 className="schedule-standings-header">Division Standings</h5>
         <div className="iowa-division-standings mb-3">
           <button className="blue-milb-button">
-            <a href="https://www.milb.com/iowa/standings/" target="_blank">
+            <a
+              href="https://www.milb.com/iowa/standings/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <span>Division Standings</span>
             </a>
           </button>
@@ -22,6 +26,7 @@ function TrippleAAA() {
             <a
               href="https://www.milb.com/iowa/schedule/2023-04"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Cubs Schedule</span>
             </a>
