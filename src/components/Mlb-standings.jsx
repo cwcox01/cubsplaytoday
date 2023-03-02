@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 
 function Mlbstandings() {
   // getting today's date and converting it to a string
-  let today = new Date();
-  let dateString = today.toLocaleDateString();
 
   const [standings, setStandings] = useState(undefined);
   const [loading, setLoading] = useState(true);
@@ -47,9 +45,6 @@ function Mlbstandings() {
             <p>Losses: {cubsRecordData.leagueRecord.losses}</p>
           </div>
         )}
-        <h4 className="pt-5 pb-0 cubs-date-today">
-          Today's Date: {dateString}{" "}
-        </h4>
       </div>
     </div>
   );

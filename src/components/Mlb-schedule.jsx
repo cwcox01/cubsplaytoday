@@ -40,8 +40,22 @@ function Mlbschedule() {
       });
   }
 
+  const cubsTimeToday = {
+    gameDate: new Date("2023-03-02T19:05:00Z"),
+    // Other game information...
+  };
+
+  const gameTime = cubsTimeToday.gameDate.toLocaleTimeString("en-US", {
+    timeZone: "America/New_York",
+  });
+
+  const dateOfGame = cubsTimeToday.gameDate.toLocaleDateString("en-US", {
+    timeZone: "America/New_York",
+  });
+
   return (
-    <div className="mlb-schedule-container">
+    <div className="mlb-schedule-container pt-3">
+      <h4 className="schedule-standings-header">Game Date: {dateOfGame} </h4>
       <div className="mlb-schedule1 pt-3">
         {!loading && cubsGameToday ? (
           <div className="chi-game">
@@ -54,11 +68,14 @@ function Mlbschedule() {
                 {cubsGameToday.teams.home.leagueRecord.losses}
               </p>
               <h4>Score: {cubsGameToday.teams.home.score}</h4>
-              <h4 className="current-inning">
-                Current Inning: {cubsGameToday.linescore.inningState}{" "}
-                {cubsGameToday.linescore.currentInning}
-              </h4>
-              <p>Game Status: {cubsGameToday.status.detailedState}</p>
+              <div className="pt-3">
+                <h4 className="current-inning">
+                  Current Inning: {cubsGameToday.linescore.inningState}{" "}
+                  {cubsGameToday.linescore.currentInning}
+                </h4>
+                <p>Game Status: {cubsGameToday.status.detailedState}</p>
+                <p>Game Time: {gameTime} CST</p>
+              </div>
             </div>
             <div>
               <h4>Away</h4>
