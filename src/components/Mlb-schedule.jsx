@@ -35,19 +35,21 @@ function Mlbschedule() {
       .find((game) => {
         const isCubsGame =
           game.teams.away.team.id === 112 || game.teams.home.team.id === 112;
-        const isToday = game.gameDate.slice(0, 10) === today;
+        const isToday = game.officialDate.slice(0, 10) === today;
         return isCubsGame && isToday;
       });
   }
 
   const cubsTimeToday = {
-    gameDate: new Date("2023-03-02T19:05:00Z"),
+    gameDate: new Date(cubsGameToday?.gameDate),
     // Other game information...
   };
 
-  const gameTime = cubsTimeToday.gameDate.toLocaleTimeString("en-US", {
-    timeZone: "America/New_York",
-  });
+  const gameTime = cubsTimeToday.gameDate
+    .toLocaleTimeString("en-US", {
+      timeZone: "America/New_York",
+    })
+    .slice(0, 4);
 
   const dateOfGame = cubsTimeToday.gameDate.toLocaleDateString("en-US", {
     timeZone: "America/New_York",
@@ -74,7 +76,7 @@ function Mlbschedule() {
                   {cubsGameToday.linescore.currentInning}
                 </h4>
                 <p>Game Status: {cubsGameToday.status.detailedState}</p>
-                <p>Game Time: {gameTime} CST</p>
+                <p>Game Time: {gameTime} EST</p>
               </div>
             </div>
             <div>
