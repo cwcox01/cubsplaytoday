@@ -119,6 +119,19 @@ li a:hover {
   border: 0.5rem #0e3386 solid;
 }
 
+/* cubs top 10 prospect table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 4px;
+}
+
 /* footer section styling */
 footer {
   color: #cc3433;
@@ -258,6 +271,12 @@ p a:hover {
 
   li {
     padding-bottom: 0px;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 0px;
   }
 
   /* mlb section media query */

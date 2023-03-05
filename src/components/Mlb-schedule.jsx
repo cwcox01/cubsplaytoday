@@ -47,11 +47,13 @@ function Mlbschedule() {
 
   const gameTime = cubsTimeToday.gameDate
     .toLocaleTimeString("en-US", {
+      localeMatcher: "best fit",
       timeZone: "America/New_York",
     })
     .slice(0, 4);
 
   const dateOfGame = cubsTimeToday.gameDate.toLocaleDateString("en-US", {
+    localeMatcher: "best fit",
     timeZone: "America/New_York",
   });
 
@@ -91,7 +93,7 @@ function Mlbschedule() {
             </div>
           </div>
         ) : (
-          <p>No Cubs game today.</p>
+          <p className="schedule-standings-header">No Cubs game today.</p>
         )}
       </div>
     </div>
