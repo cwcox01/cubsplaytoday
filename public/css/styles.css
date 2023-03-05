@@ -276,7 +276,7 @@ p a:hover {
   th,
   td {
     text-align: left;
-    padding: 0px;
+    padding: 4px;
   }
 
   /* mlb section media query */
