@@ -1,5 +1,8 @@
 import React from "react";
 
+// importing NavbarDisplay for navbar into smaller component
+import NavbarDisplay from "./NavbarDisplay";
+
 function Navbar() {
   return (
     <div className="navbar">
@@ -8,26 +11,7 @@ function Navbar() {
         <h1 className="mb-0">W</h1>
       </div>
       <nav className="site-nav">
-        <ul className="pe-4">
-          <li className="pe-3">
-            <a href="#mlb-section">MLB</a>
-          </li>
-          <li className="pe-3">
-            <a href="#tripple-a-section">AAA</a>
-          </li>
-          <li className="pe-3">
-            <a href="#double-a-section">AA</a>
-          </li>
-          <li className="pe-3">
-            <a href="#adv-a-section">A Adv.</a>
-          </li>
-          <li className="pe-3">
-            <a href="#low-a-section">Low A</a>
-          </li>
-          <li className="pe-3">
-            <a href="#prospect-section">Prospects</a>
-          </li>
-        </ul>
+        <NavbarDisplay />
       </nav>
     </div>
   );
