@@ -1,5 +1,8 @@
 import React from "react";
 
+// importing blue milb item
+import BluemilbItem from "./BluemilbItem";
+
 // starting advanced a function
 function AdvA() {
   return (
@@ -8,29 +11,19 @@ function AdvA() {
       <div className="adva-division-standings">
         <h5 className="ps-2 schedule-standings-header">Division Standings</h5>
         <div className="adva-division-standings mb-3">
-          <button className="blue-milb-button">
-            <a
-              href="https://www.milb.com/south-bend/standings/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Division Standings</span>
-            </a>
-          </button>
+          <BluemilbItem
+            blueBtnUrl="https://www.milb.com/south-bend/standings/"
+            blueBtnText="Division Standings"
+          />
         </div>
       </div>
       <div className="adva-schedule">
         <h5 className="ps-2 schedule-standings-header">SB Cubs Schedule</h5>
         <div className="sbc-schedule">
-          <button className="blue-milb-button">
-            <a
-              href="https://www.milb.com/south-bend/schedule/2023-04"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>SB Cubs Schedule</span>
-            </a>
-          </button>
+          <BluemilbItem
+            blueBtnUrl="https://www.milb.com/south-bend/schedule/2023-04"
+            blueBtnText="SB Cubs Schedule"
+          />
         </div>
       </div>
     </div>

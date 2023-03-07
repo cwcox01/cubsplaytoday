@@ -1,5 +1,8 @@
 import React from "react";
 
+// importing red milb button
+import RedmilbItem from "./RedmilbItem";
+
 // starting lowA function
 function LowA() {
   return (
@@ -8,29 +11,19 @@ function LowA() {
       <div className="a-division-standings">
         <h5 className="schedule-standings-header">Division Standings</h5>
         <div className="a-division-standings mb-3">
-          <button className="red-milb-button">
-            <a
-              href="https://www.milb.com/myrtle-beach/standings/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Division Standings</span>
-            </a>
-          </button>
+          <RedmilbItem
+            redBtnUrl="https://www.milb.com/myrtle-beach/standings/"
+            redBtnText="Division Standings"
+          />
         </div>
       </div>
       <div className="aa-schedule">
         <h5 className="schedule-standings-header">Pelicans Schedule</h5>
         <div className="ten-schedule">
-          <button className="red-milb-button">
-            <a
-              href="https://www.milb.com/myrtle-beach/schedule/2023-04"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Pelicans Schedule</span>
-            </a>
-          </button>
+          <RedmilbItem
+            redBtnUrl="https://www.milb.com/myrtle-beach/schedule/2023-04"
+            redBtnText="Pelicans Schedule"
+          />
         </div>
       </div>
     </div>
