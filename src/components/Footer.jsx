@@ -1,5 +1,9 @@
 import React from "react";
 
+// importing social media sharing
+import { FacebookShareButton, FacebookIcon } from "react-share";
+import { TwitterShareButton, TwitterIcon } from "react-share";
+
 function Footer() {
   return (
     <footer className="pt-3 ps-5">
@@ -12,6 +16,23 @@ function Footer() {
       <p className="email-me">
         <a href="mailto:corycox.com">Email</a>
       </p>
+      <div>
+        <FacebookShareButton
+          className="facebook-share"
+          url={"https://cubsplaytoday.com"}
+        >
+                  
+          <FacebookIcon size={16} round />
+                
+        </FacebookShareButton>
+        <TwitterShareButton
+          className="twitter-share"
+          url={"https://cubsplaytoday.com"}
+        >
+            
+          <TwitterIcon size={16} round />
+        </TwitterShareButton>
+      </div>
     </footer>
   );
 }

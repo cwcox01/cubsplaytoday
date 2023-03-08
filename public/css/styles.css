@@ -163,6 +163,19 @@ p a:hover {
   border-radius: 1px;
 }
 
+.facebook-share {
+  width: 0.625rem;
+}
+
+.twitter-share {
+  width: 1rem;
+  margin-left: 1rem;
+}
+
+.email-me {
+  margin-bottom: 0.25rem;
+}
+
 /* all level buttons styling */
 
 .blue-milb-button {

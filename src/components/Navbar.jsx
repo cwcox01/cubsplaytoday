@@ -10,6 +10,7 @@ function Navbar() {
       <div className="cubs-flag-nav cubs-flag-nac ps-3 pe-3">
         <h1 className="mb-0">W</h1>
       </div>
+
       <nav className="site-nav">
         <NavbarDisplay />
       </nav>
