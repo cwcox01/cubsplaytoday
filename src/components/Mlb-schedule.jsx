@@ -47,12 +47,12 @@ function Mlbschedule() {
     // Other game information...
   };
 
-  const gameTime = cubsTimeToday.gameDate
-    .toLocaleTimeString("en-US", {
-      localeMatcher: "best fit",
-      timeZone: "America/New_York",
-    })
-    .slice(0, 4);
+  const gameTime = cubsTimeToday.gameDate.toLocaleTimeString("en-US", {
+    localeMatcher: "best fit",
+    timeZone: "America/New_York",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   const dateOfGame = cubsTimeToday.gameDate.toLocaleDateString("en-US", {
     localeMatcher: "best fit",
