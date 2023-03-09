@@ -81,6 +81,10 @@ li a:hover {
 .cubs-date-today {
   color: white;
 }
+
+.cubs-flag-mlb {
+  display: inline-block;
+}
 /* tripple aaa section of page */
 
 .tripple-a {

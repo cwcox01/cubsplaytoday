@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+const CUBS_ID = 112;
+
 function Mlbschedule() {
   // setting a space variable for Away/Home Record between the string home/away record and the actual record
   const spaceRecord = " ";
@@ -57,6 +59,8 @@ function Mlbschedule() {
     timeZone: "America/New_York",
   });
 
+  const cubsWon = cubsGameToday?.seriesStatus?.winningTeam?.id === CUBS_ID;
+
   return (
     <div className="mlb-schedule-container pt-3">
       <h4 className="schedule-standings-header">Game Date: {dateOfGame} </h4>
@@ -79,6 +83,11 @@ function Mlbschedule() {
                 </h4>
                 <p>Game Status: {cubsGameToday.status.detailedState}</p>
                 <p>Game Time: {gameTime} EST</p>
+                {cubsWon && (
+                  <div className="cubs-flag cubs-flag-mlb ps-3 pe-3">
+                    <h1 className="mb-0">W</h1>
+                  </div>
+                )}
               </div>
             </div>
             <div>
