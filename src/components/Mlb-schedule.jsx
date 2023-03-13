@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 const CUBS_ID = 112;
 
+const todayDate = new Date().toLocaleDateString("en-US");
+
 function Mlbschedule() {
   // setting a space variable for Away/Home Record between the string home/away record and the actual record
   const spaceRecord = " ";
@@ -102,7 +104,12 @@ function Mlbschedule() {
             </div>
           </div>
         ) : (
-          <p className="schedule-standings-header">No Cubs game today.</p>
+          <div>
+            <p className="schedule-standings-header">
+              Todays Date: {todayDate}
+            </p>
+            <p className="schedule-standings-header">No cubs game today.</p>
+          </div>
         )}
       </div>
     </div>
