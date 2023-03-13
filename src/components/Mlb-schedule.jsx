@@ -56,12 +56,16 @@ function Mlbschedule() {
     minute: "2-digit",
   });
 
-  const dateOfGame = cubsTimeToday.gameDate.toLocaleDateString("en-US", {
+  let dateOfGame = cubsTimeToday.gameDate.toLocaleDateString("en-US", {
     localeMatcher: "best fit",
     timeZone: "America/New_York",
   });
 
   const cubsWon = cubsGameToday?.seriesStatus?.winningTeam?.id === CUBS_ID;
+
+  if (todayDate !== cubsTimeToday.officialDate) {
+    dateOfGame = "Off Day";
+  }
 
   return (
     <div className="mlb-schedule-container pt-3">
