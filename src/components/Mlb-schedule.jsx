@@ -63,32 +63,30 @@ function Mlbschedule() {
 
   const cubsWon = cubsGameToday?.seriesStatus?.winningTeam?.id === CUBS_ID;
 
-  if (todayDate !== cubsTimeToday.officialDate) {
-    dateOfGame = "Off Day";
-  }
-
   return (
     <div className="mlb-schedule-container pt-3">
-      <h4 className="schedule-standings-header">Game Date: {dateOfGame} </h4>
       <div className="mlb-schedule1 pt-3">
         {!loading && cubsGameToday ? (
           <div className="chi-game">
             <div>
-              <h4>Home</h4>
+              <p className="schedule-standings-header ">
+                Game Date: {dateOfGame}{" "}
+              </p>
+              <p>Home</p>
               <p>{cubsGameToday.teams.home.team.name}</p>
               <p>
                 Record:{spaceRecord}
                 {cubsGameToday.teams.home.leagueRecord.wins}-
                 {cubsGameToday.teams.home.leagueRecord.losses}
               </p>
-              <h4>Score: {cubsGameToday.teams.home.score}</h4>
+              <p>Score: {cubsGameToday.teams.home.score}</p>
               <div className="pt-3">
-                <h4 className="current-inning">
+                <p className="current-inning">
                   Current Inning: {cubsGameToday.linescore.inningState}{" "}
                   {cubsGameToday.linescore.currentInning}
-                </h4>
+                </p>
                 <p>Game Status: {cubsGameToday.status.detailedState}</p>
-                <p>Game Time: {gameTime} EST</p>
+
                 {cubsWon && (
                   <div className="cubs-flag cubs-flag-mlb ps-3 pe-3">
                     <h1 className="mb-0">W</h1>
@@ -97,14 +95,15 @@ function Mlbschedule() {
               </div>
             </div>
             <div>
-              <h4>Away</h4>
+              <p>Game Time: {gameTime} EST</p>
+              <p>Away</p>
               <p>{cubsGameToday.teams.away.team.name}</p>
               <p>
                 Record:{spaceRecord}
                 {cubsGameToday.teams.away.leagueRecord.wins}-
                 {cubsGameToday.teams.away.leagueRecord.losses}
               </p>
-              <h4>Score: {cubsGameToday.teams.away.score}</h4>
+              <p>Score: {cubsGameToday.teams.away.score}</p>
             </div>
           </div>
         ) : (
