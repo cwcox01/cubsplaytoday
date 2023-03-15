@@ -30,8 +30,13 @@ function Mlbschedule() {
 
   let cubsGameToday = null;
   if (data) {
-    // Get today's date in YYYY-MM-DD format
-    const today = new Date().toISOString().slice(0, 10);
+    var date = new Date();
+    var year = date.toLocaleString("default", { year: "numeric" });
+    const month = date.toLocaleString("default", { month: "2-digit" });
+    const day = date.toLocaleString("default", { day: "2-digit" });
+
+    // Generate yyyy-mm-dd date string
+    const today = year + "-" + month + "-" + day;
 
     // Find the first game involving the Cubs that is being played today
     cubsGameToday = data.dates
@@ -39,7 +44,9 @@ function Mlbschedule() {
       .find((game) => {
         const isCubsGame =
           game.teams.away.team.id === 112 || game.teams.home.team.id === 112;
-        const isToday = game.officialDate.slice(0, 10) === today;
+        const isToday = game.officialDate === today;
+        console.log("date2", isToday);
+        console.log("date3", game.officialDate);
         return isCubsGame && isToday;
       });
   }
