@@ -13,7 +13,7 @@
         "Rank": 2,
         "Player": "Kevin Alcantara",
         "Position": "OF",
-        "Level": "MLB",
+        "Level": "A+",
         "Age": 20,
         "Bats": "R",
         "Throws": "R"
@@ -22,7 +22,7 @@
         "Rank": 3,
         "Player": "Brennen Davis",
         "Position": "OF",
-        "Level": "MLB",
+        "Level": "AAA",
         "Age": 23,
         "Bats": "R",
         "Throws": "R"
@@ -67,7 +67,7 @@
         "Rank": 8,
         "Player": "Ben Brown",
         "Position": "RHP",
-        "Level": "MLB",
+        "Level": "AA",
         "Age": 23,
         "Bats": "R",
         "Throws": "R"
