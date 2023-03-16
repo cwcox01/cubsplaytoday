@@ -352,6 +352,7 @@ p a:hover {
     font-size: 18px;
     font-weight: bold;
     padding: 5px;
+    letter-spacing: 5px;
   }
 
   .navbar-menu.active {
