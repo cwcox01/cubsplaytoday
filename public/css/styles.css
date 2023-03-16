@@ -296,6 +296,73 @@ p a:hover {
     padding: 4px;
   }
 
+  .site-nav {
+    display: flex;
+    align-items: center;
+    background-color: #0e3386;
+    padding: 10px 20px;
+  }
+
+  .navbar-toggle {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .navbar-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -1px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar-toggle span:first-child {
+    transform: translateY(-6px);
+  }
+
+  .navbar-toggle span:last-child {
+    transform: translateY(6px);
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #cc3433;
+    padding: 10px;
+  }
+
+  .navbar-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-menu li {
+    margin-bottom: 10px;
+  }
+
+  .navbar-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  .navbar-menu.active {
+    display: block;
+    height: auto;
+  }
+
   /* mlb section media query */
   .chi-game {
     gap: 0;

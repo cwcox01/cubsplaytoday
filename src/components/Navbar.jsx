@@ -1,9 +1,11 @@
 import React from "react";
+import { useState } from "react";
 
 // importing NavbarDisplay for navbar into smaller component
 import NavbarDisplay from "./NavbarDisplay";
 
 function Navbar() {
+  const [isActive, setIsActive] = useState(false);
   return (
     <div className="navbar">
       <h1 className="site-header ps-3">Cubs</h1>
@@ -12,7 +14,17 @@ function Navbar() {
       </div>
 
       <nav className="site-nav">
-        <NavbarDisplay />
+        <div
+          className={`navbar-toggle ${isActive ? "active" : ""}`}
+          onClick={() => setIsActive(!isActive)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className={`navbar-menu ${isActive ? "active" : ""}`}>
+          <NavbarDisplay />
+        </div>
       </nav>
     </div>
   );

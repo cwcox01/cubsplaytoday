@@ -5,7 +5,7 @@ import NavbarItem from "./NavbarItem";
 
 export default function NavbarDisplay() {
   return (
-    <ul className="pe-4">
+    <ul className="pe-4 mobile-nav">
       <NavbarItem navbarUrl="#mlb-section" navbarText="MLB" />
       <NavbarItem navbarUrl="#tripple-a-section" navbarText="AAA" />
       <NavbarItem navbarUrl="#double-a-section" navbarText="AA" />
