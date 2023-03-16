@@ -337,6 +337,7 @@ p a:hover {
     width: 100%;
     background-color: #cc3433;
     padding: 10px;
+    letter-spacing: 5px;
   }
 
   .navbar-menu ul {
