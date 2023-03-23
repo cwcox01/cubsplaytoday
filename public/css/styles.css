@@ -1,30 +1,42 @@
+/* defining css variables for common values */
+:root {
+  --cubBlue: #0e3386;
+  --cubRed: #cc3433;
+  --cubWhite: #fff;
+  --cubFlexDisplay: flex;
+  --cubNoValue: none;
+  --cubRemValue: 1.5rem;
+  --cubCenterValue: center;
+}
+
 /* body and misc element css */
 body {
-  background-color: #0e3386;
+  background-color: var(--cubBlue);
   margin-left: 0;
   margin-right: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
-  color: #0e3386;
+  color: var(--cubBlue);
 }
 
 h3 {
-  color: white;
+  color: var(--cubWhite);
 }
+
 /* setting the standings/schedule headings to red on blue background sections */
 .schedule-standings-header {
-  color: white;
+  color: var(--cubWhite);
 }
 
 .section-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--cubRemValue);
 }
 
 /* navbar sectiion css  */
 .navbar {
-  background-color: #cc3433;
+  background-color: var(--cubWhite);
 }
 
 li {
@@ -32,47 +44,46 @@ li {
 }
 
 .site-nav a {
-  text-decoration: none;
-  color: #0e3386;
+  text-decoration: var(--cubNoValue);
+  color: var(--cubBlue);
   letter-spacing: 1.5px;
 }
 
 .site-nav a:hover {
-  color: white;
-  border: 1px solid;
-  border-radius: 3px;
+  color: var(--cubBlue);
+  border-bottom: 3px solid;
 }
 
 .cubs-flag-nav {
-  background-color: white;
-  border: 2px #0e3386 solid;
+  background-color: var(--cubWhite);
+  border: 2px var(--cubBlue) solid;
   border-radius: 1px;
 }
 
 /* mlb section of page */
 
 .mlb {
-  padding: 1.5rem;
+  padding: var(--cubRemValue);
 }
 
 .chi-game {
-  color: white;
-  display: flex;
+  color: var(--cubWhite);
+  display: var(--cubFlexDisplay);
   gap: 2rem;
 }
 
 .mlb-schedule-container {
-  display: flex;
+  display: var(--cubFlexDisplay);
   flex-direction: column;
 }
 
 .cubs-record-info p {
-  color: white;
+  color: var(--cubWhite);
   margin-bottom: 0;
 }
 
 .cubs-record-header {
-  color: white;
+  color: var(--cubWhite);
 }
 
 .current-inning {
@@ -80,7 +91,7 @@ li {
 }
 
 .cubs-date-today {
-  color: white;
+  color: var(--cubWhite);
 }
 
 .cubs-flag-mlb {
@@ -90,35 +101,35 @@ li {
 /* tripple aaa section of page */
 
 .tripple-a {
-  background-color: #cc3433;
-  color: white;
-  padding: 1.5rem;
+  background-color: var(--cubRed);
+  color: var(--cubWhite);
+  padding: var(--cubRemValue);
 }
 
 /* double a styling */
 
 .double-a {
-  padding: 1.5rem;
+  padding: var(--cubRemValue);
 }
 
 /* advance a css styling */
 
 .adv-a {
-  padding: 1.5rem;
-  background-color: #cc3433;
+  padding: var(--cubRemValue);
+  background-color: var(--cubRed);
 }
 
 /* low a css styling */
 
 .low-a {
-  padding: 1.5rem;
+  padding: var(--cubRemValue);
 }
 
 /* prospect section styling */
 
 .prospects {
-  background-color: #cc3433;
-  padding: 1.5rem;
+  background-color: var(--cubRed);
+  padding: var(--cubRemValue);
 }
 
 /* cubs top 10 prospect table */
@@ -136,41 +147,41 @@ td {
 
 /* footer section styling */
 footer {
-  color: #fff;
+  color: var(--cubWhite);
   font-size: 0.75rem;
-  display: flex;
+  display: var(--cubFlexDisplay);
   flex-direction: column;
-  align-items: center;
+  align-items: var(--cubCenterValue);
 }
 
 p a {
-  color: #fff;
-  text-decoration: none;
+  color: var(--cubWhite);
+  text-decoration: var(--cubNoValue);
 }
 
 p a:hover {
-  color: #fff;
-  border-bottom: 3px white solid;
+  color: var(--cubWhite);
+  border-bottom: 3px var(--cubWhite) solid;
 }
 
 .footer-cubs-text {
-  display: flex;
+  display: var(--cubFlexDisplay);
   flex-direction: column;
-  align-items: center;
+  align-items: var(--cubCenterValue);
 }
 
 .cubs-flag {
-  background-color: white;
-  border: 2px #cc3433 solid;
+  background-color: var(--cubWhite);
+  border: 2px var(--cubRed) solid;
   border-radius: 1px;
-  display: flex;
-  justify-content: center;
+  display: var(--cubFlexDisplay);
+  justify-content: var(--cubCenterValue);
 }
 
 .footer-content {
-  display: flex;
+  display: var(--cubFlexDisplay);
   flex-direction: column;
-  align-items: center;
+  align-items: var(--cubCenterValue);
 }
 
 .facebook-share {
@@ -186,36 +197,36 @@ p a:hover {
 }
 
 .social-media-share {
-  background-color: white;
+  background-color: var(--cubWhite);
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: var(--cubFlexDisplay);
+  justify-content: var(--cubCenterValue);
 }
 
 .footer-nav {
-  background-color: #fff;
+  background-color: var(--cubWhite);
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: var(--cubFlexDisplay);
+  justify-content: var(--cubCenterValue);
 }
 
 .footer-nav a {
-  color: #0e3386;
-  text-decoration: none;
+  color: var(--cubBlue);
+  text-decoration: var(--cubNoValue);
 }
 
 .footer-nav a:hover {
-  color: #0e3386;
-  border-bottom: 3px solid #0e3386;
+  color: var(--cubBlue);
+  border-bottom: 3px solid var(--cubBlue);
 }
 
 /* all level buttons styling */
 
 .blue-milb-button {
   border-radius: 4px;
-  background-color: #0e3386;
-  border: none;
-  text-align: center;
+  background-color: var(--cubBlue);
+  border: var(--cubNoValue);
+  text-align: var(--cubCenterValue);
   font-size: 1rem;
   padding: 1.25rem;
   transition: all 0.5s;
@@ -249,14 +260,14 @@ p a:hover {
 }
 
 .blue-milb-button a {
-  color: white;
+  color: var(--cubWhite);
 }
 
 .red-milb-button {
   border-radius: 4px;
-  background-color: #cc3433;
-  border: none;
-  text-align: center;
+  background-color: var(--cubRed);
+  border: var(--cubNoValue);
+  text-align: var(--cubCenterValue);
   font-size: 1rem;
   padding: 1.25rem;
   transition: all 0.5s;
@@ -290,28 +301,22 @@ p a:hover {
 }
 
 .red-milb-button a {
-  color: white;
+  color: var(--cubWhite);
 }
 
 /* setting media query for mobile */
 
 @media screen and (max-width: 700px) {
-  /* navbar media query */
-  /* nav {
-    flex-direction: column;
-    align-items: stretch;
-  } */
-
   nav ul {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    display: flex;
+    display: var(--cubFlexDisplay);
     align-items: flex-end;
   }
 
   nav li {
-    text-align: center;
+    text-align: var(--cubCenterValue);
     padding-bottom: 0.25rem;
   }
 
@@ -320,9 +325,9 @@ p a:hover {
   }
 
   .site-nav {
-    display: flex;
-    align-items: center;
-    background-color: #0e3386;
+    display: var(--cubFlexDisplay);
+    align-items: var(--cubCenterValue);
+    background-color: var(--cubBlue);
     padding: 10px 20px;
   }
 
@@ -338,7 +343,7 @@ p a:hover {
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--cubWhite);
     top: 50%;
     margin-top: -1px;
     transition: all 0.2s ease-in-out;
@@ -353,18 +358,18 @@ p a:hover {
   }
 
   .navbar-menu {
-    display: none;
+    display: var(--cubNoValue);
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #cc3433;
+    background-color: var(--cubRed);
     padding: 10px;
     letter-spacing: 5px;
   }
 
   .navbar-menu ul {
-    list-style: none;
+    list-style: var(--cubNoValue);
     margin: 0;
     padding: 0;
   }
@@ -375,8 +380,8 @@ p a:hover {
 
   .navbar-menu a {
     display: block;
-    color: #fff;
-    text-decoration: none;
+    color: var(--cubWhite);
+    text-decoration: var(--cubNoValue);
     font-size: 18px;
     font-weight: bold;
     padding: 5px;
@@ -388,6 +393,10 @@ p a:hover {
     height: auto;
   }
 
+  .mobile-nav a:hover {
+    color: var(--cubWhite);
+    border-bottom: 3px solid;
+  }
   /* prospect table mobile settings */
   th,
   td {
@@ -401,8 +410,8 @@ p a:hover {
   }
 
   .footer-nav {
-    display: flex;
-    justify-content: center;
+    display: var(--cubFlexDisplay);
+    justify-content: var(--cubCenterValue);
     flex-direction: row;
   }
 }
