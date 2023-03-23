@@ -31,13 +31,13 @@ li {
   display: inline;
 }
 
-li a {
+.site-nav a {
   text-decoration: none;
   color: #0e3386;
   letter-spacing: 1.5px;
 }
 
-li a:hover {
+.site-nav a:hover {
   color: white;
   border: 1px solid;
   border-radius: 3px;
@@ -84,8 +84,9 @@ li a:hover {
 }
 
 .cubs-flag-mlb {
-  display: inline-block;
+  width: 40%;
 }
+
 /* tripple aaa section of page */
 
 .tripple-a {
@@ -120,10 +121,6 @@ li a:hover {
   padding: 1.5rem;
 }
 
-.prospect-iframe {
-  border: 0.5rem #0e3386 solid;
-}
-
 /* cubs top 10 prospect table */
 table {
   border-collapse: collapse;
@@ -139,7 +136,7 @@ td {
 
 /* footer section styling */
 footer {
-  color: #cc3433;
+  color: #fff;
   font-size: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -147,13 +144,13 @@ footer {
 }
 
 p a {
-  color: #cc3433;
+  color: #fff;
   text-decoration: none;
 }
 
 p a:hover {
-  color: #cc3433;
-  border: 1px white solid;
+  color: #fff;
+  border-bottom: 3px white solid;
 }
 
 .footer-cubs-text {
@@ -166,6 +163,14 @@ p a:hover {
   background-color: white;
   border: 2px #cc3433 solid;
   border-radius: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .facebook-share {
@@ -173,12 +178,35 @@ p a:hover {
 }
 
 .twitter-share {
-  width: 1rem;
-  margin-left: 1rem;
+  margin-left: 1.25rem;
 }
 
 .email-me {
   margin-bottom: 0.25rem;
+}
+
+.social-media-share {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: #0e3386;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #0e3386;
+  border-bottom: 3px solid #0e3386;
 }
 
 /* all level buttons styling */
@@ -269,10 +297,10 @@ p a:hover {
 
 @media screen and (max-width: 700px) {
   /* navbar media query */
-  nav {
+  /* nav {
     flex-direction: column;
     align-items: stretch;
-  }
+  } */
 
   nav ul {
     flex-direction: column;
@@ -370,5 +398,11 @@ p a:hover {
   /* mlb section media query */
   .chi-game {
     gap: 0;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
   }
 }

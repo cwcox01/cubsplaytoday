@@ -95,7 +95,7 @@ function Mlbschedule() {
                 <p>Game Status: {cubsGameToday.status.detailedState}</p>
 
                 {cubsWon && (
-                  <div className="cubs-flag cubs-flag-mlb ps-3 pe-3">
+                  <div className=" cubs-flag cubs-flag-mlb ps-3 pe-3">
                     <h1 className="mb-0">W</h1>
                   </div>
                 )}
