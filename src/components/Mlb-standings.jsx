@@ -8,13 +8,12 @@ function Mlbstandings() {
   const [loading, setLoading] = useState(true);
 
   const standingsUrl =
-    "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2022&date=2022-10-05&standingsTypes=regularSeason,springTraining,firstHalf,secondHalf&hydrate=division,conference,sport,league,team(nextSchedule(team,gameType=[R,F,D,L,W,C],inclusive=false),previousSchedule(team,gameType=[R,F,D,L,W,C],inclusive=true))";
+    "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2023&date=2023-10-05&standingsTypes=regularSeason,springTraining,firstHalf,secondHalf&hydrate=division,conference,sport,league,team(nextSchedule(team,gameType=[R,F,D,L,W,C],inclusive=false),previousSchedule(team,gameType=[R,F,D,L,W,C],inclusive=true))";
 
   useEffect(() => {
     fetch(standingsUrl)
       .then((response) => response.json())
       .then((standings) => {
-        console.log("standing data", standings);
         setStandings(standings);
         setLoading(false);
       })
@@ -31,8 +30,16 @@ function Mlbstandings() {
     (record) => record.team.teamName === "Cubs"
   )[0];
 
-  console.log("nlCentralDivision", nlCentralDivision);
-  console.log("cubsRecordData", cubsRecordData);
+  const seasonStatus = nlCentralDivision?.league.seasonState.toLowerCase();
+  let cubSeasonStatusText = "";
+
+  if (seasonStatus === "spring training") {
+    cubSeasonStatusText = "Spring Training";
+  } else if (seasonStatus === "regular season") {
+    cubSeasonStatusText = "Regular Season";
+  } else {
+    cubSeasonStatusText = "Offseason";
+  }
 
   return (
     <div className="mlb-division-standings">
@@ -40,7 +47,9 @@ function Mlbstandings() {
         <h5 className="cubs-record-header">Cubs Record</h5>
         {!loading && (
           <div className="cubs-record-info">
-            <p>Season: {cubsRecordData.season}</p>
+            <p>
+              Season: {cubsRecordData.season} {cubSeasonStatusText}
+            </p>
             <p>Wins: {cubsRecordData.leagueRecord.wins}</p>
             <p>Losses: {cubsRecordData.leagueRecord.losses}</p>
           </div>

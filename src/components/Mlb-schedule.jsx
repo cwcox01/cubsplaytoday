@@ -19,7 +19,6 @@ function Mlbschedule() {
     fetch(scheduleUrl)
       .then((response) => response.json())
       .then((usefulData) => {
-        console.log("schedule data", usefulData);
         setLoading(false);
         setData(usefulData);
       })
@@ -45,8 +44,6 @@ function Mlbschedule() {
         const isCubsGame =
           game.teams.away.team.id === 112 || game.teams.home.team.id === 112;
         const isToday = game.officialDate === today;
-        console.log("date2", isToday);
-        console.log("date3", game.officialDate);
         return isCubsGame && isToday;
       });
   }
