@@ -29,7 +29,7 @@ function Mlbschedule() {
 
   let cubsGameToday = null;
   if (data) {
-    var date = new Date();
+    var date = new Date("2023-03-24");
     var year = date.toLocaleString("default", { year: "numeric" });
     const month = date.toLocaleString("default", { month: "2-digit" });
     const day = date.toLocaleString("default", { day: "2-digit" });
@@ -76,38 +76,86 @@ function Mlbschedule() {
               <p className="schedule-standings-header ">
                 Game Date: {dateOfGame}{" "}
               </p>
-              <p>Home</p>
-              <p>{cubsGameToday.teams.home.team.name}</p>
-              <p>
-                Record:{spaceRecord}
-                {cubsGameToday.teams.home.leagueRecord.wins}-
-                {cubsGameToday.teams.home.leagueRecord.losses}
-              </p>
-              <p>Score: {cubsGameToday.teams.home.score}</p>
-              <div className="pt-3">
-                <p className="current-inning">
-                  Current Inning: {cubsGameToday.linescore.inningState}{" "}
-                  {cubsGameToday.linescore.currentInning}
+              <p>Game Time: {gameTime} EST</p>
+            </div>
+            <div className="d-flex">
+              <div className="d-flex flex-column">
+                <p>Home</p>
+                <p>{cubsGameToday.teams.home.team.name}</p>
+                <p>
+                  Record:{spaceRecord}
+                  {cubsGameToday.teams.home.leagueRecord.wins}-
+                  {cubsGameToday.teams.home.leagueRecord.losses}
                 </p>
-                <p>Game Status: {cubsGameToday.status.detailedState}</p>
-
-                {cubsWon && (
-                  <div className=" cubs-flag cubs-flag-mlb ps-3 pe-3">
-                    <h1 className="mb-0">W</h1>
-                  </div>
-                )}
+                <p>Score: {cubsGameToday.teams.home.score}</p>
+              </div>
+              <div className="d-flex flex-column ps-5">
+                <p>Away</p>
+                <p>{cubsGameToday.teams.away.team.name}</p>
+                <p>
+                  Record:{spaceRecord}
+                  {cubsGameToday.teams.away.leagueRecord.wins}-
+                  {cubsGameToday.teams.away.leagueRecord.losses}
+                </p>
+                <p>Score: {cubsGameToday.teams.away.score}</p>
               </div>
             </div>
-            <div>
-              <p>Game Time: {gameTime} EST</p>
-              <p>Away</p>
-              <p>{cubsGameToday.teams.away.team.name}</p>
-              <p>
-                Record:{spaceRecord}
-                {cubsGameToday.teams.away.leagueRecord.wins}-
-                {cubsGameToday.teams.away.leagueRecord.losses}
+            <div className="pt-1">
+              <p className="current-inning">
+                Current Inning: {cubsGameToday.linescore.inningState}{" "}
+                {cubsGameToday.linescore.currentInning}
               </p>
-              <p>Score: {cubsGameToday.teams.away.score}</p>
+              <p>Game Status: {cubsGameToday.status.detailedState}</p>
+              <div>
+                <table className="schedule-standings-header innings-table">
+                  <tr>
+                    <th>Teams</th>
+                    <th className="ps-2">R</th>
+                    <th className="ps-2">H</th>
+                    <th className="ps-2">E</th>
+                    <th className="ps-2">LOB</th>
+                  </tr>
+                  <tr>
+                    <td className="ps-2">
+                      {cubsGameToday.teams.away.team.teamName}
+                    </td>
+                    <td className="ps-2">
+                      {cubsGameToday.linescore.teams.away.runs}
+                    </td>
+                    <td className="ps-2">
+                      {cubsGameToday.linescore.teams.away.hits}
+                    </td>
+                    <td className="ps-2">
+                      {cubsGameToday.linescore.teams.away.errors}
+                    </td>
+                    <td className="ps-2">
+                      {cubsGameToday.linescore.teams.away.leftOnBase}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="ps-2">
+                      {cubsGameToday.teams.home.team.teamName}
+                    </td>
+                    <td className="ps-2">
+                      {cubsGameToday.linescore.teams.home.runs}
+                    </td>
+                    <td className="ps-2">
+                      {cubsGameToday.linescore.teams.home.hits}
+                    </td>
+                    <td className="ps-2">
+                      {cubsGameToday.linescore.teams.home.errors}
+                    </td>
+                    <td className="ps-2">
+                      {cubsGameToday.linescore.teams.home.leftOnBase}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              {cubsWon && (
+                <div className=" cubs-flag cubs-flag-mlb mt-3">
+                  <h1 className="mb-0">W</h1>
+                </div>
+              )}
             </div>
           </div>
         ) : (

@@ -68,7 +68,6 @@ li {
 
 .chi-game {
   color: var(--cubWhite);
-  display: var(--cubFlexDisplay);
   gap: 2rem;
 }
 
@@ -95,7 +94,7 @@ li {
 }
 
 .cubs-flag-mlb {
-  width: 40%;
+  width: 10%;
 }
 
 /* tripple aaa section of page */
@@ -404,9 +403,18 @@ p a:hover {
     padding: 4px;
   }
 
+  /* innings table class mobile settings */
+  .innings-table {
+    margin-top: 2rem;
+  }
+
   /* mlb section media query */
   .chi-game {
     gap: 0;
+  }
+
+  .cubs-flag-mlb {
+    width: 20%;
   }
 
   .footer-nav {

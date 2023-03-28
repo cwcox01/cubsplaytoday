@@ -16,7 +16,7 @@ function Prospects() {
         </h5>
         <div className="prospect-list">
           <div>
-            <table className="schedule-standings-header">
+            <table className="schedule-standings-header prospect-table">
               <tr>
                 <th>Rank</th>
                 <th>Name</th>
