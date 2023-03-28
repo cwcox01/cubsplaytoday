@@ -29,7 +29,7 @@ function Mlbschedule() {
 
   let cubsGameToday = null;
   if (data) {
-    var date = new Date("2023-03-24");
+    var date = new Date();
     var year = date.toLocaleString("default", { year: "numeric" });
     const month = date.toLocaleString("default", { month: "2-digit" });
     const day = date.toLocaleString("default", { day: "2-digit" });
