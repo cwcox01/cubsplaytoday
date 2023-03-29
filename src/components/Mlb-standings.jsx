@@ -8,7 +8,7 @@ function Mlbstandings() {
   const [loading, setLoading] = useState(true);
 
   const standingsUrl =
-    "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2023&date=2023-10-05&standingsTypes=regularSeason,springTraining,firstHalf,secondHalf&hydrate=division,conference,sport,league,team(nextSchedule(team,gameType=[R,F,D,L,W,C],inclusive=false),previousSchedule(team,gameType=[R,F,D,L,W,C],inclusive=true))";
+    "https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=2023&standingsTypes=regularSeason,springTraining,firstHalf,secondHalf&hydrate=division,conference,sport,league,team(nextSchedule(team,gameType=[R,F,D,L,W,C],inclusive=false),previousSchedule(team,gameType=[R,F,D,L,W,C],inclusive=true))";
 
   useEffect(() => {
     fetch(standingsUrl)
@@ -35,7 +35,7 @@ function Mlbstandings() {
 
   if (seasonStatus === "spring training") {
     cubSeasonStatusText = "Spring Training";
-  } else if (seasonStatus === "regular season") {
+  } else if (seasonStatus === "inseason") {
     cubSeasonStatusText = "Regular Season";
   } else {
     cubSeasonStatusText = "Offseason";
