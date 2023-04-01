@@ -1,8 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-const CUBS_ID = 112;
-
 const todayDate = new Date().toLocaleDateString("en-US");
 
 function Mlbschedule() {
@@ -27,26 +25,25 @@ function Mlbschedule() {
       });
   }, []);
 
-  let cubsGameToday = null;
-  if (data) {
-    var date = new Date();
-    var year = date.toLocaleString("default", { year: "numeric" });
-    const month = date.toLocaleString("default", { month: "2-digit" });
-    const day = date.toLocaleString("default", { day: "2-digit" });
+  var date = new Date();
+  var year = date.toLocaleString("default", { year: "numeric" });
+  const month = date.toLocaleString("default", { month: "2-digit" });
+  const day = date.toLocaleString("default", { day: "2-digit" });
 
-    // Generate yyyy-mm-dd date string
-    const today = year + "-" + month + "-" + day;
+  // Generate yyyy-mm-dd date string
+  const today = year + "-" + month + "-" + day;
 
-    // Find the first game involving the Cubs that is being played today
-    cubsGameToday = data.dates
-      .flatMap((date) => date.games)
-      .find((game) => {
-        const isCubsGame =
-          game.teams.away.team.id === 112 || game.teams.home.team.id === 112;
-        const isToday = game.officialDate === today;
-        return isCubsGame && isToday;
-      });
-  }
+  // Find the first game involving the Cubs that is being played today
+  const cubsGameToday = data?.dates
+    .flatMap((date) => date.games)
+    .find((game) => {
+      const isCubsGame =
+        game.teams.away.team.id === 112 || game.teams.home.team.id === 112;
+      const isToday = game.officialDate === today;
+      return isCubsGame && isToday;
+    });
+
+  console.log("cubsGameToday", cubsGameToday);
 
   const cubsTimeToday = {
     gameDate: new Date(cubsGameToday?.gameDate),
@@ -60,12 +57,18 @@ function Mlbschedule() {
     minute: "2-digit",
   });
 
-  let dateOfGame = cubsTimeToday.gameDate.toLocaleDateString("en-US", {
+  const dateOfGame = cubsTimeToday.gameDate.toLocaleDateString("en-US", {
     localeMatcher: "best fit",
     timeZone: "America/New_York",
   });
 
-  const cubsWon = cubsGameToday?.seriesStatus?.winningTeam?.id === CUBS_ID;
+  const cubsAtHome = cubsGameToday?.teams.home.team.id === 112;
+
+  const cubsResults = cubsAtHome
+    ? cubsGameToday?.teams.home
+    : cubsGameToday?.teams.away;
+
+  const cubsWon = cubsResults?.isWinner;
 
   return (
     <div className="mlb-schedule-container pt-3">
