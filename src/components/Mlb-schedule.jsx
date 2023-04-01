@@ -109,11 +109,11 @@ function Mlbschedule() {
               <div>
                 <table className="schedule-standings-header innings-table">
                   <tr>
-                    <th>Teams</th>
-                    <th className="ps-2">R</th>
-                    <th className="ps-2">H</th>
-                    <th className="ps-2">E</th>
-                    <th className="ps-2">LOB</th>
+                    <th className="w-25">Teams</th>
+                    <th className="pe-0">R</th>
+                    <th className="pe-0">H</th>
+                    <th className="pe-0">E</th>
+                    <th className="pe-0">LOB</th>
                   </tr>
                   <tr>
                     <td className="ps-2">
