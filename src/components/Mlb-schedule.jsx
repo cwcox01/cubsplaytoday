@@ -74,7 +74,7 @@ function Mlbschedule() {
     <div className="mlb-schedule-container pt-3">
       <div className="mlb-schedule1 pt-3">
         {!loading && cubsGameToday ? (
-          <div className="chi-game">
+          <div className="chi-game white-text-color">
             <div>
               <p className="schedule-standings-header ">
                 Game Date: {dateOfGame}{" "}
@@ -163,10 +163,8 @@ function Mlbschedule() {
           </div>
         ) : (
           <div>
-            <p className="schedule-standings-header">
-              Todays Date: {todayDate}
-            </p>
-            <p className="schedule-standings-header">No cubs game today.</p>
+            <p className="white-text-color">Todays Date: {todayDate}</p>
+            <p className="white-text-color">No cubs game today.</p>
           </div>
         )}
       </div>

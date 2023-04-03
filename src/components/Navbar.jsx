@@ -21,9 +21,9 @@ function Navbar() {
   }, [navbarRef]);
 
   return (
-    <div className="navbar" ref={navbarRef}>
+    <div className="navbar white-background-color" ref={navbarRef}>
       <h1 className="site-header ps-3">Cubs</h1>
-      <div className="cubs-flag-nav cubs-flag-nac ps-3 pe-3">
+      <div className="cubs-flag-nav rounded-1 ps-3 pe-3">
         <h1 className="mb-0">W</h1>
       </div>
 

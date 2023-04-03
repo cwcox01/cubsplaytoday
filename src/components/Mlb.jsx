@@ -8,8 +8,8 @@ import Mlbschedule from "./Mlb-schedule";
 
 function Mlb() {
   return (
-    <div className="mlb" id="mlb-section">
-      <h3 className="section-header">MLB - Chicago Cubs</h3>
+    <div className="site-padding" id="mlb-section">
+      <h3 className="section-header white-text-color">MLB - Chicago Cubs</h3>
       <Mlbstandings />
       <Mlbschedule />
     </div>

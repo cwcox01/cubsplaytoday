@@ -8,9 +8,9 @@ import FooterNav from "./FooterNav";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="white-text-color d-flex flex-column align-items-center">
       <FooterContent />
-      <div className="social-media-share">
+      <div className="social-media-share white-background-color d-flex justify-content-center">
         <FacebookShareButton
           className="facebook-share"
           url={"https://cubsplaytoday.com"}

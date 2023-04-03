@@ -17,31 +17,35 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* common site values */
+
 h1 {
   color: var(--cubBlue);
 }
 
-h3 {
+.white-text-color {
   color: var(--cubWhite);
 }
 
-/* setting the standings/schedule headings to red on blue background sections */
-.schedule-standings-header {
-  color: var(--cubWhite);
+.red-background-color {
+  background-color: var(--cubRed);
 }
+
+.white-background-color {
+  background-color: var(--cubWhite);
+}
+
+.site-padding {
+  padding: 1.5rem;
+}
+
+/* section header margin-bottom */
 
 .section-header {
   margin-bottom: var(--cubRemValue);
 }
 
 /* navbar sectiion css  */
-.navbar {
-  background-color: var(--cubWhite);
-}
-
-li {
-  display: inline;
-}
 
 .site-nav a {
   text-decoration: var(--cubNoValue);
@@ -55,80 +59,25 @@ li {
 }
 
 .cubs-flag-nav {
-  background-color: var(--cubWhite);
   border: 2px var(--cubBlue) solid;
-  border-radius: 1px;
 }
 
 /* mlb section of page */
 
-.mlb {
-  padding: var(--cubRemValue);
-}
-
 .chi-game {
-  color: var(--cubWhite);
   gap: 2rem;
 }
 
-.mlb-schedule-container {
-  display: var(--cubFlexDisplay);
-  flex-direction: column;
-}
-
 .cubs-record-info p {
-  color: var(--cubWhite);
   margin-bottom: 0;
-}
-
-.cubs-record-header {
-  color: var(--cubWhite);
 }
 
 .current-inning {
   margin-top: 1rem;
 }
 
-.cubs-date-today {
-  color: var(--cubWhite);
-}
-
 .cubs-flag-mlb {
   width: 10%;
-}
-
-/* tripple aaa section of page */
-
-.tripple-a {
-  background-color: var(--cubRed);
-  color: var(--cubWhite);
-  padding: var(--cubRemValue);
-}
-
-/* double a styling */
-
-.double-a {
-  padding: var(--cubRemValue);
-}
-
-/* advance a css styling */
-
-.adv-a {
-  padding: var(--cubRemValue);
-  background-color: var(--cubRed);
-}
-
-/* low a css styling */
-
-.low-a {
-  padding: var(--cubRemValue);
-}
-
-/* prospect section styling */
-
-.prospects {
-  background-color: var(--cubRed);
-  padding: var(--cubRemValue);
 }
 
 /* cubs top 10 prospect table */
@@ -146,11 +95,7 @@ td {
 
 /* footer section styling */
 footer {
-  color: var(--cubWhite);
   font-size: 0.75rem;
-  display: var(--cubFlexDisplay);
-  flex-direction: column;
-  align-items: var(--cubCenterValue);
 }
 
 p a {
@@ -163,24 +108,8 @@ p a:hover {
   border-bottom: 3px var(--cubWhite) solid;
 }
 
-.footer-cubs-text {
-  display: var(--cubFlexDisplay);
-  flex-direction: column;
-  align-items: var(--cubCenterValue);
-}
-
 .cubs-flag {
-  background-color: var(--cubWhite);
   border: 2px var(--cubRed) solid;
-  border-radius: 1px;
-  display: var(--cubFlexDisplay);
-  justify-content: var(--cubCenterValue);
-}
-
-.footer-content {
-  display: var(--cubFlexDisplay);
-  flex-direction: column;
-  align-items: var(--cubCenterValue);
 }
 
 .facebook-share {
@@ -196,17 +125,11 @@ p a:hover {
 }
 
 .social-media-share {
-  background-color: var(--cubWhite);
   width: 100%;
-  display: var(--cubFlexDisplay);
-  justify-content: var(--cubCenterValue);
 }
 
 .footer-nav {
-  background-color: var(--cubWhite);
   width: 100%;
-  display: var(--cubFlexDisplay);
-  justify-content: var(--cubCenterValue);
 }
 
 .footer-nav a {

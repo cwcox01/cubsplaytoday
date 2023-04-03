@@ -6,7 +6,10 @@ import BluemilbItem from "./BluemilbItem";
 // starting tripplea function
 function TrippleAAA() {
   return (
-    <div className="tripple-a" id="tripple-a-section">
+    <div
+      className="red-background-color white-text-color site-padding"
+      id="tripple-a-section"
+    >
       <h3 className="section-header">AAA - Iowa Cubs</h3>
       <div className="aaa-division-standings">
         <h5 className="schedule-standings-header">Division Standings</h5>

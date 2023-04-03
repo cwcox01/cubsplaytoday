@@ -6,17 +6,19 @@ const cubProspect = list.prospect;
 
 function Prospects() {
   return (
-    <div className="prospects" id="prospect-section">
+    <div className="site-padding red-background-color" id="prospect-section">
       <div className="prospects-header">
-        <h3 className="section-header">Chicago Cubs Prospects</h3>
+        <h3 className="section-header white-text-color">
+          Chicago Cubs Prospects
+        </h3>
       </div>
       <div className="prospect-list-1">
-        <h5 className="prospect-list-scroll ps-2 schedule-standings-header">
+        <h5 className="prospect-list-scroll ps-2 white-text-color">
           Prospect List Top 10
         </h5>
         <div className="prospect-list">
           <div>
-            <table className="schedule-standings-header prospect-table">
+            <table className="white-text-color prospect-table">
               <tr>
                 <th>Rank</th>
                 <th>Name</th>

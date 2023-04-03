@@ -44,9 +44,9 @@ function Mlbstandings() {
   return (
     <div className="mlb-division-standings">
       <div className="chi-division-standings">
-        <h5 className="cubs-record-header">Cubs Record</h5>
+        <h5 className="white-text-color">Cubs Record</h5>
         {!loading && (
-          <div className="cubs-record-info">
+          <div className="cubs-record-info white-text-color">
             <p>
               Season: {cubsRecordData.season} {cubSeasonStatusText}
             </p>
