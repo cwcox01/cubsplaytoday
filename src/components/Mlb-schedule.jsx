@@ -155,7 +155,7 @@ function Mlbschedule() {
                 </table>
               </div>
               {cubsWon && (
-                <div className=" cubs-flag cubs-flag-mlb mt-3">
+                <div className=" cubs-flag cubs-flag-mlb mt-3 white-background-color d-flex justify-content-center">
                   <h1 className="mb-0">W</h1>
                 </div>
               )}
